@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: external-ingress
+spec:
+  rules:
+  - host: foo.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: whereami
+          servicePort: 80
